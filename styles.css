@@ -8,3 +8,70 @@ body {
   padding: 1rem;
   font-family: "Arvo";
 }
+
+button {
+  border: none;
+  background-color: #d5321b;
+  color: #eee;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  font-family: "Arvo";
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #b62a17;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.vertical-space-1 {
+  margin-top: 1rem;
+}
+
+.content-block {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* flip order for every other instance */
+.content-block:nth-of-type(even) {
+  grid-template-columns: 1fr 2fr;
+}
+
+.content-block:nth-of-type(even) .media {
+  order: 2;
+}
+
+.content-block:nth-of-type(even) .content {
+  order: 1;
+}
+
+.content-block img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.content-block .content-block-text {
+  font-size: 2rem;
+  align-self: center;
+}
+
+@media (max-width: 768px) {
+  .content-block,
+  .content-block:nth-of-type(even) {
+    grid-template-columns: 1fr;
+  }
+
+  .content-block:nth-of-type(even) .media,
+  .content-block:nth-of-type(even) .content {
+    order: 0;
+  }
+}
