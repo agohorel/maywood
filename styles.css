@@ -27,6 +27,11 @@ button:hover {
   font-weight: bold;
 }
 
+.center {
+  display: flex;
+  justify-content: center;
+}
+
 .vertical-space-1 {
   margin-top: 1rem;
 }
@@ -74,4 +79,17 @@ button:hover {
   .content-block:nth-of-type(even) .content {
     order: 0;
   }
+}
+
+/* events table styles */
+.events {
+  text-align: center;
+}
+
+.events h3 {
+  font-size: 2rem;
+}
+
+.events-table {
+  border-spacing: 1rem;
 }
