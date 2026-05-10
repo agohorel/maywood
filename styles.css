@@ -48,7 +48,7 @@ button:hover {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 1rem;
-  margin-bottom: 1rem;
+  padding-top: 1rem;
 }
 
 /* flip order for every other instance */
