@@ -32,8 +32,16 @@ button:hover {
   justify-content: center;
 }
 
-.vertical-space-1 {
+.margin-top-1 {
   margin-top: 1rem;
+}
+
+.margin-vertical-1 {
+  margin: 1rem 0 1rem 0;
+}
+
+.margin-vertical-4 {
+  margin: 4rem 0 4rem 0;
 }
 
 .content-block {
@@ -101,10 +109,6 @@ button:hover {
   padding: 2rem;
   background-color: #f9f9f9;
   border-radius: 8px;
-}
-
-.contact-info {
-  margin: 1rem 0 1rem 0;
 }
 
 .contact-section h3 {
