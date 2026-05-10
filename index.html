@@ -68,7 +68,7 @@
             <button class="vertical-space-1">event schedule</button>
         </div>
     </section>
-    <div class="center">
+    <div id="support" class="center">
         <button>support</button>
     </div>
 
@@ -106,6 +106,42 @@
                 <td>Betsy Singer</td>
             </tr>
         </table>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h3>Contact</h3>
+        <p class="contact-info">We are a 501(c)(3) non-profit organization. We rely on
+            voluneers and dontaions maintain and run our museum and events.
+            If you would like to voluneer, make a donation, or become a member,
+            please complete the form below.
+        </p>
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Mailing Address</label>
+                <textarea id="address" name="address" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            <div class="form-group">
+                <label for="interest">Interest</label>
+                <select id="interest" name="interest">
+                    <option value="volunteer">Volunteer</option>
+                    <option value="donate">Donate</option>
+                    <option value="member">Become a member</option>
+                </select>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
     </section>
 </body>
 
