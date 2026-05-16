@@ -211,7 +211,10 @@ button:hover {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(calc(344px - 2rem), 1fr));
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(max(350px, calc((100% - 3rem) / 4)), 1fr)
+  );
   gap: 1rem;
   align-items: start;
 }
@@ -335,6 +338,10 @@ button:hover {
 @media (max-width: 768px) {
   body {
     padding: 0.75rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(calc(344px - 2rem), 1fr));
   }
 
   .modal-hint {
