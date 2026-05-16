@@ -71,7 +71,7 @@ nav {
   color: inherit;
 }
 
-@media (max-width: 1099px) {
+@media (max-width: 1349px) {
   #nav-links {
     display: none;
     flex-direction: column;
@@ -87,7 +87,7 @@ nav {
   }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1350px) {
   nav {
     display: grid;
     grid-template-columns: 1fr auto 1fr;

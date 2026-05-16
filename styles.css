@@ -1,3 +1,13 @@
+:root {
+  /* Fluid typography scale (min 320px, max 1200px) */
+  --text-sm: clamp(0.875rem, 0.8rem + 0.38vw, 1rem);
+  --text-base: clamp(1rem, 0.93rem + 0.38vw, 1.125rem);
+  --text-md: clamp(1.125rem, 1.05rem + 0.38vw, 1.25rem);
+  --text-lg: clamp(1.25rem, 1.02rem + 1.13vw, 2rem);
+  --text-xl: clamp(1.5rem, 1.23rem + 1.35vw, 2.4rem);
+  --text-xxl: clamp(1.75rem, 1.37rem + 1.88vw, 3rem);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -7,6 +17,19 @@
 body {
   padding: 1rem;
   font-family: "Arvo";
+  font-size: var(--text-base);
+}
+
+h1 {
+  font-size: var(--text-xxl);
+}
+
+h2 {
+  font-size: var(--text-xl);
+}
+
+h3 {
+  font-size: var(--text-lg);
 }
 
 body.modal-open {
@@ -18,7 +41,7 @@ button {
   background-color: #d5321b;
   color: #eee;
   padding: 1rem 2rem;
-  font-size: 2rem;
+  font-size: var(--text-lg);
   font-family: "Arvo";
 }
 
@@ -77,7 +100,7 @@ button:hover {
 }
 
 .content-block .content-block-text {
-  font-size: 2rem;
+  font-size: var(--text-lg);
   align-self: center;
 }
 
@@ -99,12 +122,12 @@ button:hover {
 }
 
 .events h3 {
-  font-size: 2.4rem;
+  font-size: var(--text-xl);
 }
 
 .events-table {
   border-spacing: 1rem;
-  font-size: 2rem;
+  font-size: var(--text-lg);
 }
 
 /* form styles */
@@ -117,7 +140,7 @@ button:hover {
 }
 
 .contact-section h3 {
-  font-size: 2rem;
+  font-size: var(--text-lg);
   margin-bottom: 1.5rem;
   text-align: center;
 }
@@ -136,14 +159,14 @@ button:hover {
 
 .form-group label {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: var(--text-md);
 }
 
 .form-group input,
 .form-group textarea,
 .form-group select {
   padding: 0.8rem;
-  font-size: 1rem;
+  font-size: var(--text-base);
   border: 1px solid #ccc;
   border-radius: 4px;
 }
@@ -159,7 +182,7 @@ button:hover {
 }
 
 .gallery-section h3 {
-  font-size: 2.4rem;
+  font-size: var(--text-xl);
   margin-bottom: 2rem;
 }
 
@@ -218,7 +241,7 @@ button:hover {
   background: transparent;
   color: #333;
   padding: 0.5rem;
-  font-size: 2rem;
+  font-size: var(--text-lg);
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
@@ -233,7 +256,7 @@ button:hover {
   text-align: center;
   margin-top: 1rem;
   color: #666;
-  font-size: 0.9rem;
+  font-size: var(--text-sm);
 }
 
 .modal-hint kbd {
