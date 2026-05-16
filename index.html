@@ -259,6 +259,36 @@
                 modalImage.src = galleryButtons[currentIndex].querySelector('img').src;
             }
         });
+
+        // Swipe gesture support
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        dialog.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        dialog.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
+
+        function handleSwipe() {
+            const minSwipeDistance = 50;
+            const swipeDistance = touchEndX - touchStartX;
+
+            if (Math.abs(swipeDistance) < minSwipeDistance) return;
+
+            if (swipeDistance < 0) {
+                // Swiped left -> next image
+                currentIndex = (currentIndex + 1) % galleryButtons.length;
+                modalImage.src = galleryButtons[currentIndex].querySelector('img').src;
+            } else {
+                // Swiped right -> previous image
+                currentIndex = (currentIndex - 1 + galleryButtons.length) % galleryButtons.length;
+                modalImage.src = galleryButtons[currentIndex].querySelector('img').src;
+            }
+        }
     </script>
 </body>
 
