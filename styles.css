@@ -249,4 +249,9 @@ button:hover {
   .modal-hint {
     display: none;
   }
+
+  .image-modal {
+    padding: 0px;
+    max-width: 100vw;
+  }
 }
