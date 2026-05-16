@@ -148,31 +148,103 @@
     <section id="gallery" class="gallery-section margin-vertical-4">
         <h3>gallery</h3>
         <div class="gallery">
-            <img loading="lazy" src="assets/photos/gallery/13.webp" />
-            <img loading="lazy" src="assets/photos/gallery/21.webp" />
-            <img loading="lazy" src="assets/photos/gallery/23.webp" />
-            <img loading="lazy" src="assets/photos/gallery/23A.webp" />
-            <img loading="lazy" src="assets/photos/gallery/23d.webp" />
-            <img loading="lazy" src="assets/photos/gallery/24.webp" />
-            <img loading="lazy" src="assets/photos/gallery/25.webp" />
-            <img loading="lazy" src="assets/photos/gallery/27a.webp" />
-            <img loading="lazy" src="assets/photos/gallery/36.webp" />
-            <img loading="lazy" src="assets/photos/gallery/41tex.webp" />
-            <img loading="lazy" src="assets/photos/gallery/44.webp" />
-            <img loading="lazy" src="assets/photos/gallery/75.webp" />
-            <img loading="lazy" src="assets/photos/gallery/92.webp" />
-            <img loading="lazy" src="assets/photos/gallery/173a.webp" />
-            <img loading="lazy" src="assets/photos/gallery/178.webp" />
-            <img loading="lazy" src="assets/photos/gallery/194A.webp" />
-            <img loading="lazy" src="assets/photos/gallery/230A.webp" />
-            <img loading="lazy" src="assets/photos/gallery/238.webp" />
-            <img loading="lazy" src="assets/photos/gallery/254a.webp" />
-            <img loading="lazy" src="assets/photos/gallery/255.webp" />
-            <img loading="lazy" src="assets/photos/gallery/371.webp" />
-            <img loading="lazy" src="assets/photos/gallery/386L.webp" />
-            <img loading="lazy" src="assets/photos/gallery/505183315_10230736706014482_8309820433475023706_n.webp" />
+            <button type="button" class="gallery-btn" aria-label="View full size image">
+                <img loading="lazy" src="assets/photos/gallery/13.webp" alt="" />
+            </button>
+            <button type="button" class="gallery-btn" aria-label="View full size image">
+                <img loading="lazy" src="assets/photos/gallery/21.webp" alt="" />
+            </button>
+            <button type="button" class="gallery-btn" aria-label="View full size image">
+                <img loading="lazy" src="assets/photos/gallery/23.webp" alt="" />
+            </button>
+            <button type="button" class="gallery-btn" aria-label="View full size image">
+                <img loading="lazy" src="assets/photos/gallery/23A.webp" alt="" />
+            </button>
+            <button type="button" class="gallery-btn" aria-label="View full size image">
+                <img loading="lazy" src="assets/photos/gallery/23d.webp" alt="" />
+            </button>
+            <button type="button" class="gallery-btn" aria-label="View full size image">
+                <img loading="lazy" src="assets/photos/gallery/24.webp" alt="" />
+            </button>
+            <button type="button" class="gallery-btn" aria-label="View full size image">
+                <img loading="lazy" src="assets/photos/gallery/25.webp" alt="" />
+            </button>
+            <button type="button" class="gallery-btn" aria-label="View full size image">
+                <img loading="lazy" src="assets/photos/gallery/27a.webp" alt="" />
+            </button>
+            <button type="button" class="gallery-btn" aria-label="View full size image">
+                <img loading="lazy" src="assets/photos/gallery/36.webp" alt="" />
+            </button>
+            <button type="button" class="gallery-btn" aria-label="View full size image">
+                <img loading="lazy" src="assets/photos/gallery/41tex.webp" alt="" />
+            </button>
+            <button type="button" class="gallery-btn" aria-label="View full size image">
+                <img loading="lazy" src="assets/photos/gallery/44.webp" alt="" />
+            </button>
+            <button type="button" class="gallery-btn" aria-label="View full size image">
+                <img loading="lazy" src="assets/photos/gallery/75.webp" alt="" />
+            </button>
+            <button type="button" class="gallery-btn" aria-label="View full size image">
+                <img loading="lazy" src="assets/photos/gallery/92.webp" alt="" />
+            </button>
+            <button type="button" class="gallery-btn" aria-label="View full size image">
+                <img loading="lazy" src="assets/photos/gallery/173a.webp" alt="" />
+            </button>
+            <button type="button" class="gallery-btn" aria-label="View full size image">
+                <img loading="lazy" src="assets/photos/gallery/178.webp" alt="" />
+            </button>
+            <button type="button" class="gallery-btn" aria-label="View full size image">
+                <img loading="lazy" src="assets/photos/gallery/194A.webp" alt="" />
+            </button>
+            <button type="button" class="gallery-btn" aria-label="View full size image">
+                <img loading="lazy" src="assets/photos/gallery/230A.webp" alt="" />
+            </button>
+            <button type="button" class="gallery-btn" aria-label="View full size image">
+                <img loading="lazy" src="assets/photos/gallery/238.webp" alt="" />
+            </button>
+            <button type="button" class="gallery-btn" aria-label="View full size image">
+                <img loading="lazy" src="assets/photos/gallery/254a.webp" alt="" />
+            </button>
+            <button type="button" class="gallery-btn" aria-label="View full size image">
+                <img loading="lazy" src="assets/photos/gallery/255.webp" alt="" />
+            </button>
+            <button type="button" class="gallery-btn" aria-label="View full size image">
+                <img loading="lazy" src="assets/photos/gallery/371.webp" alt="" />
+            </button>
+            <button type="button" class="gallery-btn" aria-label="View full size image">
+                <img loading="lazy" src="assets/photos/gallery/386L.webp" alt="" />
+            </button>
+            <button type="button" class="gallery-btn" aria-label="View full size image">
+                <img loading="lazy" src="assets/photos/gallery/505183315_10230736706014482_8309820433475023706_n.webp"
+                    alt="" />
+            </button>
         </div>
     </section>
+
+    <dialog id="image-modal" class="image-modal">
+        <button id="close-modal" class="modal-close-btn" aria-label="Close modal">&times;</button>
+        <img id="modal-image" src="" alt="Full size image" />
+    </dialog>
+
+    <script>
+        const dialog = document.getElementById('image-modal');
+        const modalImage = document.getElementById('modal-image');
+        const closeButton = document.getElementById('close-modal');
+        const galleryButtons = document.querySelectorAll('.gallery-btn');
+
+        galleryButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const img = btn.querySelector('img');
+                modalImage.src = img.src;
+                dialog.showModal();
+            });
+        });
+
+        closeButton.addEventListener('click', () => dialog.close());
+        dialog.addEventListener('click', (e) => {
+            if (e.target === dialog) dialog.close();
+        });
+    </script>
 </body>
 
 </html>
