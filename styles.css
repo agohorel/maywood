@@ -224,3 +224,25 @@ button:hover {
 .modal-close-btn:hover {
   background: #eee;
 }
+
+.modal-hint {
+  text-align: center;
+  margin-top: 1rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.modal-hint kbd {
+  display: inline-block;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.1rem 0.4rem;
+  font-family: monospace;
+}
+
+@media (max-width: 768px) {
+  .modal-hint {
+    display: none;
+  }
+}
