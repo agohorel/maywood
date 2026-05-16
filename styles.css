@@ -222,6 +222,13 @@ button:hover {
   padding: 0;
   width: 100%;
   cursor: pointer;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.gallery-btn:hover img {
+  opacity: 0.9;
+  transform: scale(1.05);
 }
 
 .gallery-btn:focus-visible {
@@ -235,7 +242,9 @@ button:hover {
   aspect-ratio: 1 / 1;
   object-fit: cover;
   display: block;
-  border-radius: 3px;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
 }
 
 /* image modal styles */
