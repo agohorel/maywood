@@ -290,12 +290,20 @@
                 modalImage.src = img.src;
                 dialog.showModal();
                 document.body.classList.add('modal-open');
+                // Add show class after a tiny delay to trigger transition
+                setTimeout(() => dialog.classList.add('show'), 10);
             });
         });
 
-        closeButton.addEventListener('click', () => dialog.close());
+        function closeDialog() {
+            dialog.classList.remove('show');
+            // Wait for transition to finish before actually closing
+            setTimeout(() => dialog.close(), 300);
+        }
+
+        closeButton.addEventListener('click', closeDialog);
         dialog.addEventListener('click', (e) => {
-            if (e.target === dialog) dialog.close();
+            if (e.target === dialog) closeDialog();
         });
 
         dialog.addEventListener('close', () => {
