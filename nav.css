@@ -23,6 +23,8 @@ nav {
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   width: 100%;
+  position: relative;
+  padding: 0 3rem;
 }
 
 .nav-brand {
@@ -36,8 +38,9 @@ nav {
 }
 
 .menu-button {
-  grid-column: 3;
-  justify-self: end;
+  position: absolute;
+  right: 0;
+  top: 0.25rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
