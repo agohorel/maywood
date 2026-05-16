@@ -231,9 +231,11 @@
         const modalImage = document.getElementById('modal-image');
         const closeButton = document.getElementById('close-modal');
         const galleryButtons = document.querySelectorAll('.gallery-btn');
+        let currentIndex = 0;
 
-        galleryButtons.forEach(btn => {
+        galleryButtons.forEach((btn, index) => {
             btn.addEventListener('click', () => {
+                currentIndex = index;
                 const img = btn.querySelector('img');
                 modalImage.src = img.src;
                 dialog.showModal();
@@ -243,6 +245,18 @@
         closeButton.addEventListener('click', () => dialog.close());
         dialog.addEventListener('click', (e) => {
             if (e.target === dialog) dialog.close();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (!dialog.open) return;
+
+            if (e.key === 'ArrowRight') {
+                currentIndex = (currentIndex + 1) % galleryButtons.length;
+                modalImage.src = galleryButtons[currentIndex].querySelector('img').src;
+            } else if (e.key === 'ArrowLeft') {
+                currentIndex = (currentIndex - 1 + galleryButtons.length) % galleryButtons.length;
+                modalImage.src = galleryButtons[currentIndex].querySelector('img').src;
+            }
         });
     </script>
 </body>
