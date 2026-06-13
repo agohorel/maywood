@@ -50,6 +50,12 @@ button:hover {
   background-color: #b62a17;
 }
 
+footer {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 12px;
+}
+
 .bold {
   font-weight: bold;
 }
