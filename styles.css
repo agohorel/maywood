@@ -56,6 +56,10 @@ footer {
   font-size: 12px;
 }
 
+footer a {
+  display: block;
+}
+
 .bold {
   font-weight: bold;
 }
